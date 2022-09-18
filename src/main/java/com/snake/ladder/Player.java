@@ -29,6 +29,7 @@ public class Player {
 	}
 
 	public int SnakeLadderBoard(int dieValue) {
+		logger.info("Die Value"+dieValue);
 		int options = random.nextInt(3) + 1;
 		switch (options) {
 		case 1:
