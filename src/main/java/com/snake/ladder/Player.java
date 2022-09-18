@@ -5,10 +5,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Player {
-
 	private static final Logger logger = LogManager.getLogger(App.class);
 	private int playerPosition;
 	int dice = 0;
+	int count = 0;
 
 	Player() {
 		playerPosition = 0;
@@ -53,16 +53,18 @@ public class Player {
 	public void play() {
 		while (playerPosition < 100) {
 			int dieValue = diceRoll();
+			count++;
 			logger.info("Dice value :" + dieValue);
 			int dia = SnakeLadderBoard(dieValue);
 			playerPosition = playerPosition + dia;
 			if (playerPosition < 0) {
 				playerPosition = 0;
-			}
-			else if (playerPosition > 100) {
+			} else if (playerPosition > 100) {
 				playerPosition = playerPosition - dia;
 			}
+			logger.info("position after every die role :" + playerPosition);
 		}
 		logger.info("Winning position :" + playerPosition);
+		logger.info("Number of times dice was played to win game :" + count);
 	}
 }
