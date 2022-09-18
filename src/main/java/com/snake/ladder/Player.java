@@ -59,6 +59,9 @@ public class Player {
 			if (playerPosition < 0) {
 				playerPosition = 0;
 			}
+			else if (playerPosition > 100) {
+				playerPosition = playerPosition - dia;
+			}
 		}
 		logger.info("Winning position :" + playerPosition);
 	}
