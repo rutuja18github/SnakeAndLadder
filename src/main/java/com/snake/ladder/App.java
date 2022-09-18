@@ -14,6 +14,6 @@ public class App {
 		logger.info( "Welcome to Snake and Ladder Game" );
     	Player playObj=new Player();
     	logger.info("Player's initial position is :"+playObj.getPlayerPosition());
-    	playObj.SnakeLadderBoard();
+    	playObj.play();
 	}
 }
