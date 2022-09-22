@@ -11,7 +11,8 @@ public class Player {
 	int count = 0;
 	int dia;
 	int options;
-
+	int dice = 0;
+	
 	Player() {
 		playerPosition = 0;
 	}
@@ -32,7 +33,6 @@ public class Player {
 	}
 
 	public int SnakeLadderBoard(int dieValue) {
-		int dice = 0;
 		options = random.nextInt(3) + 1;
 		switch (options) {
 		case 1:

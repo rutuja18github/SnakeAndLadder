@@ -12,12 +12,12 @@ public class App {
 
 	public static void main(String[] args) {
 		logger.info("Welcome to Snake and Ladder Game");
-		Player playObj = new Player();
 		Player playObj1 = new Player();
-		logger.info("Player's initial position is :" + playObj.getPlayerPosition());
+		Player playObj2 = new Player();
 		logger.info("Player's initial position is :" + playObj1.getPlayerPosition());
-		TwoPlayer g = new TwoPlayer();
-		g.playGame(playObj, playObj1);
+		logger.info("Player's initial position is :" + playObj2.getPlayerPosition());
+		TwoPlayer two = new TwoPlayer();
+		two.playGame(playObj1, playObj2);
 
 	}
 }
